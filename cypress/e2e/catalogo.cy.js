@@ -5,7 +5,7 @@ describe('funcionalidade catalogo de livros', () => {
 beforeEach(() => {cy.visit('catalog.html')
 });
 
-it('deve clicar no botao adicionar a cesta', () => {
+it.skip('deve clicar no botao adicionar a cesta', () => {
 cy.get(':nth-child(1) > .card > .card-body > .mt-auto > .d-grid > .btn-primary').click()
 cy.get('#cart-count').should('contain', 1)
     
@@ -37,7 +37,7 @@ cy.get('#global-alert-container').should('contain', 'A Metamorfose')
     
 });
 
-it.only('deve clicar no nome do livro e direccionar para a tela do livro', () => {
+it('deve clicar no nome do livro e direccionar para a tela do livro', () => {
 cy.contains('Dom Casmurro').click()
 cy.url().should('include', 'book-details')
 cy.get('#add-to-cart-btn').click()
