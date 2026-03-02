@@ -34,8 +34,21 @@ beforeEach(() => {
     //resultado esperado
     cy.url().should('include', 'dashboard')
     cy.get('#user-name').should('contain', nome)
-    
-});
 
+   
+
+
+    });
+
+
+    it.only('deve fazer cadastro com sucesso- usando comando customizado', () => {
+    let email = `teste${Date.now()}@teste.com` 
+    let nome = faker.person.fullName({sex:'female'})
+     cy.preencherCadastro(
+    nome,email,'119573528362', 'Teste@3214', 'Teste@3214')
+
+    cy.url().should('include', 'dashboard')
+        
+    });
     
-});
+})
