@@ -4,7 +4,8 @@
   "description": "primeira pratica teste automatizado",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run--Browser chrome",
+    "cy:report": "npx cypress run --record --key 2961e3e1-ca3f-4599-ae67-869e77d0fb1e"
   },
   "repository": {
     "type": "git",

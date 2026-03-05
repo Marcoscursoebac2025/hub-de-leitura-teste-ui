@@ -9,6 +9,14 @@ beforeEach(() => {
     
 });
 
+afterEach(() => {
+cy.screenshot()
+    
+
+
+});
+
+
     it('deve fazer o cadastro com sucesso, usando JS', () => {
     let email = `teste${Date.now()}@teste.com`    
     cy.get('#name').type('Marcos Perez')
