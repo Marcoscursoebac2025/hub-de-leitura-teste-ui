@@ -1,0 +1,4 @@
+@echo off
+cd C:\repositorio\ServerAgent-2.2.3
+java --enable-native-access=ALL-UNNAMED -jar ServerAgent-2.2.3.jar
+pause
